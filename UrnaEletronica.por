@@ -1,45 +1,29 @@
-algoritmo "trabalho da av1"
+programa
+{
+	
+	funcao inicio()
+	{
+		//Valida Senha
+		enquanto(senha !=  1505){
+        		escreval("Digite a senha para ligar a urna:")
+        		leia(senha)
+        	}
 
-var
-eleito:caractere
-
-//Operadores
-senha, opcao, voto, fim, maior:inteiro
-
-//Valor da AdulteraÁ„o
-adultera:inteiro
-
-//Prefeitos
-hebert, ribeiro:inteiro
-
-//Vereadores
-barone, bidu, monteiro, joaofera:inteiro
-
-//Outros
-branco, nulo:inteiro
-
-inicio
-
-//Valida Senha
-enquanto senha <> 1505 faca
-        escreval("Digite a senha para ligar a urna:")
-        leia(senha)
-fimenquanto
-
-//Iniciar VotaÁ„o?
-repita
-      escreval("Digite 1 para iniciar votaÁ„o ou 0 para Encerrar votaÁ„o:")
-      leia(opcao)
-ate ((opcao>-1) e (opcao<2))
+		//Iniciar Vota√ß√£o?
+		repita{
+			escreval("Digite 1 para iniciar vota√ß√£o ou 0 para Encerrar vota√ß√£o:")
+      		leia(opcao)
+		}
+		ate((opcao>-1) e (opcao<2))
 
 limpatela
 
 se (opcao = 1) entao
-   //Continua a votaÁ„o atÈ que escolha FIM(0)
+   //Continua a vota√ß√£o at√© que escolha FIM(0)
    repita
-      //VotaÁ„o para prefeito
+      //Vota√ß√£o para prefeito
       repita
-            escreval("Escolha o n˙mero do prefeito desejado:")
+            escreval("Escolha o n√∫mero do prefeito desejado:")
             escreval("0 - Para votar em branco")
             escreval("99 - Para votar nulo")
             escreval("90 - Herbert")
@@ -62,13 +46,13 @@ se (opcao = 1) entao
          nulo := nulo + 1
       fimse
 
-         //VotaÁ„o para vereador
+         //Vota√ß√£o para vereador
        repita
-            escreval("Escolha o n˙mero do vereador desejado:")
+            escreval("Escolha o n√∫mero do vereador desejado:")
             escreval("90000 - Barone")
             escreval("90999 - Bidu")
             escreval("95000 - Monteiro")
-            escreval("95999 - Jo„o Fera")
+            escreval("95999 - Jo√£o Fera")
             escreval("0 - Para votar em branco")
             escreval("99 - Para votar nulo")
             leia(voto)
@@ -95,7 +79,7 @@ se (opcao = 1) entao
          nulo := nulo + 1
       fimse
 
-      escreval("Digite 0 para finalizar as votaÁıes.")
+      escreval("Digite 0 para finalizar as vota√ß√µes.")
       leia(fim)
       limpatela
    ate fim=0
@@ -106,7 +90,7 @@ se (opcao = 1) entao
           barone := barone - adultera
        fimse
        
-   // 1.3.5.1) O n˙mero de votos de cada candidato;
+   // 1.3.5.1) O n√∫mero de votos de cada candidato;
    escreval("Votos para Prefeito:")
    escreval("Hebert: ", hebert)
    escreval("Ribeiro: ", ribeiro)
@@ -121,9 +105,9 @@ se (opcao = 1) entao
 
    escreval
 
-   //1.3.5.2) O n˙mero de votos em branco;
+   //1.3.5.2) O n√∫mero de votos em branco;
    escreval("Votos em Branco: ", branco)
-   //1.3.5.3) O n˙mero de votos nulos;
+   //1.3.5.3) O n√∫mero de votos nulos;
    escreval("Votos Nulos: ", nulo)
 
    escreval
@@ -154,7 +138,7 @@ se (opcao = 1) entao
    fimse
    se ((joaofera>monteiro) e (joaofera>maior)) entao
       maior := joaofeira
-      eleito := "Jo„o Feira"
+      eleito := "Jo√£o Feira"
    fimse
 
    se maior<>0 entao
@@ -163,14 +147,16 @@ se (opcao = 1) entao
       escreval("Nenhum Vereador foi eleito.")
 
 fimse
-
-fimalgoritmo
-
-
-
-
-
-
-
-
-
+	}
+}
+/* $$$ Portugol Studio $$$ 
+ * 
+ * Esta se√ß√£o do arquivo guarda informa√ß√µes do Portugol Studio.
+ * Voc√™ pode apag√°-la se estiver utilizando outro editor.
+ * 
+ * @POSICAO-CURSOR = 303; 
+ * @PONTOS-DE-PARADA = ;
+ * @SIMBOLOS-INSPECIONADOS = ;
+ * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
+ * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = variavel, vetor, matriz;
+ */
